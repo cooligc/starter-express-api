@@ -1,5 +1,5 @@
 const express = require('express')
-const schema = require('schema')
+const schema = require('./schema')
 
 
 
