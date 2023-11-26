@@ -4,8 +4,8 @@
   "snacks" : "y",
   "dinner" : "y",
   "water" : {
-    'min' : 0,
-    'max': 10
+    "min" : 0,
+    "max": 10
   },
   "exercise" : "y",
   "exercise-type" : "gym",
