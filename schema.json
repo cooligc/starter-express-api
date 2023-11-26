@@ -3,7 +3,10 @@
   "lunch" : "y",
   "snacks" : "y",
   "dinner" : "y",
-  "water" : 5,
+  "water" : {
+    'min' : 0,
+    'max': 10
+  },
   "exercise" : "y",
   "exercise-type" : "gym",
   "date" : "24-03-2023"
