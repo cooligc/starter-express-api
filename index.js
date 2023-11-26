@@ -10,6 +10,11 @@ app.get('/', (req, res) => {
   res.send('Welcome to my-health api');
 });
 
+app.get('/heartbeat', (req, res) => {
+  console.log("Just got a request!")
+  res.send('I am alive');
+});
+
 app.get('/health-metrics', (req, res) => {
   console.log("loaded schema")
   res.json(schema);
