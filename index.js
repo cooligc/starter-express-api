@@ -1,9 +1,11 @@
 const express = require('express')
+const cors = require('cors')
 const schema = require('./schema')
 
 
 
-const app = express()
+const app = express();
+app.use(cors());
 
 app.get('/', (req, res) => {
   console.log("Just got a request!")
