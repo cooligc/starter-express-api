@@ -47,8 +47,8 @@ app.get('/stocks/nifty-range', (req, res) => {
 
   
   let percentage = Math.sqrt(range)/(vix*100) ;
-  let predicted_high = nifty_close + (nifty_close*percentage)
-  let predicted_low = nifty_close - (nifty_close*percentage)
+  let predicted_high = Math.round(nifty_close + (nifty_close*percentage))
+  let predicted_low = Math.round(nifty_close - (nifty_close*percentage))
 
   let _request = {}
   _request.vix = vix
@@ -58,7 +58,7 @@ app.get('/stocks/nifty-range', (req, res) => {
 
   let _prediction = {} 
   _prediction.high=predicted_high
-  _prediction.loq=predicted_low
+  _prediction.low=predicted_low
   _prediction.percentage=percentage
 
   response.request = _request
