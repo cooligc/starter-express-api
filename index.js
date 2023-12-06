@@ -25,8 +25,8 @@ app.get('/health-metrics', (req, res) => {
 
 app.get('/stocks/nifty-range', (req, res) => {
   let range_type = req.query.range_type
-  let vix = req.query.vix
-  let nifty_close = req.query.nifty_close
+  let vix = Number(req.query.vix)
+  let nifty_close = Number(req.query.nifty_close)
 
   let response = {}
 
