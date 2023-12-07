@@ -60,6 +60,7 @@ app.get('/stocks/nifty-range', (req, res) => {
   _prediction.high=predicted_high
   _prediction.low=predicted_low
   _prediction.percentage=percentage
+  _prediction.day_range=Math.round(nifty_close*percentage)
 
   response.request = _request
   response.prediction = _prediction
